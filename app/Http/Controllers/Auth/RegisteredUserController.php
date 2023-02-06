@@ -36,7 +36,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        if(!empty($request->file('photo'))){
+        if($request->photo){
             $filename= time() . "." . $request->photo->extension();
             $path = $request->file('photo')->storeAs(
             'photo_profile',
