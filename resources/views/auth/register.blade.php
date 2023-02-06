@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -14,6 +14,13 @@
             <x-input-label for="pays" :value="__('Pays')" />
             <x-text-input id="pays" class="block mt-1 w-full" type="text" name="pays" :value="old('pays')" required autofocus />
             <x-input-error :messages="$errors->get('pays')" class="mt-2" />
+        </div>
+
+        <!-- Photo -->
+        <div>
+            <x-input-label for="photo" :value="__('Photo')" />
+            <x-text-input id="photo" class="block mt-1 w-full" type="file" name="photo" :value="old('photo')"/>
+            <x-input-error :messages="$errors->get('photo')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
