@@ -177,9 +177,9 @@
                 <!-- end of story   -->
                 <form class="create-post">
                     <div class="profile-picture">
-                        <img src="img/boy.jpg">
+                        <img src="{{ Storage::url(Auth::user()->photo) }}">
                     </div>
-                    <input type="text" name="" placeholder="your pense" id="create-post">
+                    <input type="text" name="" placeholder="a quoi pense tu" id="create-post">
                     <input type="submit" name="" value="post" class="btn btn-primary">
                 </form>
 

@@ -35,8 +35,9 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-        
-       
+
+        if( isset($request->photo) && !empty($request->file('photo'))){
+
             $filename= time() . "." . $request->photo->extension();
 
             $path = $request->file('photo')->storeAs(
@@ -54,6 +55,18 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        }else{
+
+            $user = User::create([
+                'name' => $request->name,
+                'pays' => $request->pays,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+        }
+       
+            
         
        
 
