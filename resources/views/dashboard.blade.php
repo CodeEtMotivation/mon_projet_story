@@ -147,31 +147,19 @@
                 <!-- stories   -->
 
                 <div class="stories">
+                    
+                    @foreach($stories as $story)
 
-                    <div class="story">
+                    <div class="story" style="background: url('storage/{{ $story->image }}') no-repeat center center/cover;">
                         <div class="profile-picture">
-                            <img src="img/boy.jpg">
+                            <img src="storage/{{ $story->user->photo }}">
                         </div>
-                        <p class="name">your story</p>
+                        <p class="name">{{ $story->user->name }}</p>
                     </div>
-                    <div class="story">
-                        <div class="profile-picture">
-                            <img src="img/girl.jpg">
-                        </div>
-                        <p class="name">your story</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-picture">
-                            <img src="img/model.jpg">
-                        </div>
-                        <p class="name">your story</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-picture">
-                            <img src="img/girl_with_light.jpg">
-                        </div>
-                        <p class="name">your story</p>
-                    </div>
+
+                    @endforeach
+                
+                   
 
                 </div>
                 <!-- end of story   -->
