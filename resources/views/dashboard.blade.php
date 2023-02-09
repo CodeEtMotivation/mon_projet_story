@@ -147,6 +147,13 @@
                 <!-- stories   -->
 
                 <div class="stories">
+
+                    <div class="story" style="background: url('storage/photo_profile/img_avatar3.png') no-repeat center center/cover;">
+                        <div class="profile-picture">
+                            <img src="{{ Storage::url(Auth::user()->photo) }}">
+                        </div>
+                        <p class="name">{{ Auth::user()->name }}</p>
+                    </div>
                     
                     @foreach($stories as $story)
 
@@ -172,20 +179,20 @@
                 </form>
 
                 <!-- feeds   -->
-
+                @foreach($posts as $post)
                 <div class="feeds">
                     <div class="feed">
                         <div class="head">
                             <div class="user">
                                 <div class="profile-picture">
-                                    <img src="img/boy.jpg">
+                                    <img src="storage/{{ $post->user->photo }}">
                                 </div>
                                 <div class="ingo">
                                     <h3>
-                                        lana rose
+                                        {{ $post->user->name }}
                                     </h3>
                                     <small>
-                                        dubai ,15 min
+                                        {{ $post->user->pays }} ,15 min
                                     </small>
                                 </div>
                                 
@@ -196,7 +203,7 @@
                         </div>
 
                         <div class="photo">
-                            <img src="img/flowers.jpg">
+                            <img src="storage/{{ $post->image }}">
                         </div>
 
                         <div class="action-buttons">
@@ -249,6 +256,7 @@
                     </div>  
                         <!-- end feeds   -->
                 </div>
+                @endforeach
 
 
              </div> 
