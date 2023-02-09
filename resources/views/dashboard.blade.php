@@ -192,7 +192,7 @@
                                         {{ $post->user->name }}
                                     </h3>
                                     <small>
-                                        {{ $post->user->pays }} ,15 min
+                                        {{ $post->user->pays }} , creer a {{ $post->created_at->format('h')}}h 
                                     </small>
                                 </div>
                                 
