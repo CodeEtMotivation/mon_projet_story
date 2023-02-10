@@ -127,14 +127,11 @@
                              </i>
                          </span>
                          <h3>
-                            setting
+                            setting 
                          </h3>
                      </a>
                  </div>
                  <!-- endsidebar   -->
-                 <label for="create-post" class="btn btn-primary">
-                     create
-                 </label>
              </div>
              <!--=== endleft   -->
 
