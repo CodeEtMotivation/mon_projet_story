@@ -5,7 +5,7 @@
             </h2>
             <div class="search-bar">
                 <i class="fas fa-search"></i>
-                <input type="search" placeholder="rechercher">
+                <input type="search" placeholder="rechercher" >
             </div>
             <div class="create">
                 <label for="create-post" class="btn btn-primary">

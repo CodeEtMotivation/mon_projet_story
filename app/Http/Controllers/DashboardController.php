@@ -11,10 +11,8 @@ class DashboardController extends Controller
     public function index()
     {
         $stories=Story::all();
-        $posts=Post::all();
         return view('dashboard',[
-            'stories' => $stories,
-            'posts' => $posts
+            'stories' => $stories
         ]);
     }
 }

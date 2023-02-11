@@ -13,6 +13,7 @@
         <link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js' ,'resources/js/all.js'])
+        @livewireStyles
     </head>
     <body>
         <div>
@@ -20,5 +21,6 @@
 
             @yield('content')
         </div>
+    @livewireScripts    
     </body>
 </html>
